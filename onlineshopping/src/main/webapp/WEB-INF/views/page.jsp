@@ -39,7 +39,18 @@
     <c:if test ="${userClickedHome == true}">
      <%@include file="./home.jsp" %>
     </c:if>
-  
+      
+     <c:if test = "${userClickedAbout == true}">
+     <%@ include file = ./about.jsp %>
+     </c:if>
+      
+      <c:if test = "${userClickedContact == true}">
+     <%@ include file = ./contact.jsp %>
+     </c:if>
+      
+      <c:if test = "${listproducts == true}">
+     <%@ include file = ./listproducts.jsp %>
+     </c:if>
 
     <!-- loading cmmon Footer page-->
    <%@ include file="./shared/footer.jsp" %>
