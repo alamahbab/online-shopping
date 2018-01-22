@@ -11,7 +11,8 @@ public class PageController {
 	@RequestMapping(value = {"/", "home", "index"})
 	public ModelAndView index() {
 		ModelAndView mv = new ModelAndView("page");
-		mv.addObject("greetings", "Welcome to MVC");
+		mv.addObject("tile","Home");
+		mv.addObject("userClickedHome",true);
 		return mv;
 	}
 	
@@ -21,7 +22,7 @@ public class PageController {
 			param = "Ahbab Alam";
 		}
 		ModelAndView mv = new ModelAndView("page");
-		mv.addObject("greetings",param);
+		
 		return mv;
 	}
 	
