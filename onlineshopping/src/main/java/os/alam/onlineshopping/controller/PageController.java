@@ -21,7 +21,7 @@ public class PageController {
 		if(param == null) {
 			param = "Ahbab Alam";
 		}
-		ModelAndView mv = new ModelAndView("page");
+		ModelAndView mv = new ModelAndView("page1");
 		
 		return mv;
 	}
