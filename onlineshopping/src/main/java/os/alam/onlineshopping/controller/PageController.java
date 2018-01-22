@@ -8,7 +8,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class PageController {
 
-	@RequestMapping(value = {"/", "home", "index"})
+	@RequestMapping(value = {"/", "/home", "/index"})
 	public ModelAndView index() {
 		ModelAndView mv = new ModelAndView("page");
 		mv.addObject("tile","Home");
@@ -16,14 +16,27 @@ public class PageController {
 		return mv;
 	}
 	
-	@RequestMapping("/test/{greetings}")
-	public ModelAndView test(@PathVariable("greetings") String param) {
-		if(param == null) {
-			param = "Ahbab Alam";
-		}
-		ModelAndView mv = new ModelAndView("page1");
-		
+	@RequestMapping(value = {"/about"})
+	public ModelAndView about() {
+		ModelAndView mv = new ModelAndView("page");
+		mv.addObject("tile","About us");
+		mv.addObject("userClickedAbout",true);
 		return mv;
 	}
 	
+	@RequestMapping(value = {"/contactus"})
+	public ModelAndView contact() {
+		ModelAndView mv = new ModelAndView("page");
+		mv.addObject("tile","Contact us");
+		mv.addObject("userClickedContact",true);
+		return mv;
+	}
+	
+	@RequestMapping(value = {"/listproducts"})
+	public ModelAndView listproduct() {
+		ModelAndView mv = new ModelAndView("page");
+		mv.addObject("tile","List products");
+		mv.addObject("userClickedListproducts",true);
+		return mv;
+	}
 }
