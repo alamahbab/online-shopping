@@ -6,17 +6,25 @@
   <artifactId>onlineshoppingbackend</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
-
   <name>onlineshoppingbackend</name>
   <url>http://maven.apache.org</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    	<springmvc.version>5.0.2.RELEASE</springmvc.version>
     	<maven.compiler.target>1.8</maven.compiler.target>
 		<maven.compiler.source>1.8</maven.compiler.source>
   </properties>
 
   <dependencies>
+   
+   <!--  Spring dependency for Context (@repository) -->
+   <dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context	</artifactId>
+			<version>${springmvc.version}</version>
+	</dependency>
+    
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>

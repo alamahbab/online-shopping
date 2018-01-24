@@ -41,11 +41,11 @@
     </c:if>
       
      <c:if test = "${userClickedAbout == true}">
-     <%@ include file = ./about.jsp %>
+     <%@ include file = "./about.jsp" %>
      </c:if>
       
       <c:if test = "${userClickedContact == true}">
-     <%@ include file = ./contact.jsp %>
+     <%@ include file = "./contact.jsp" %>
      </c:if>
       
    

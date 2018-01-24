@@ -21,6 +21,13 @@
 			<scope>test</scope>
 		</dependency>
 
+	<!--  Backend dependencies -->
+	<dependency>
+		<groupId>os.alam</groupId>
+		<artifactId>onlineshoppingbackend</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</dependency>
+		
 		<!-- J2EE dependency -->
 		<dependency>
 			<groupId>javax</groupId>
