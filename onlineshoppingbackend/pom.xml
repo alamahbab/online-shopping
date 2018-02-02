@@ -12,23 +12,55 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     	<springmvc.version>5.0.2.RELEASE</springmvc.version>
+    	<hibernate.version>5.0.2.Final</hibernate.version>
     	<maven.compiler.target>1.8</maven.compiler.target>
 		<maven.compiler.source>1.8</maven.compiler.source>
   </properties>
 
   <dependencies>
    
-   <!--  Spring dependency for Context (@repository) -->
+   <!--  Spring dependency -->
    <dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context	</artifactId>
 			<version>${springmvc.version}</version>
 	</dependency>
     
+     <!--  MySQL dependency  -->
+ <dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>5.1.45</version>
+</dependency>
+
+     
+    <!--  Hibernate dependency -->
+ <dependency>
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-core</artifactId>
+    <version>${hibernate.version}</version>
+  </dependency>
+    
+   <!-- Spring ORM  -->
+   <dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-orm</artifactId>
+    <version>${springmvc.version}</version>
+  </dependency>
+   
+   <!-- Connection pooling  -->
+   <dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-dbcp2</artifactId>
+    <version>2.1.1</version>
+  </dependency>
+  
+
+   
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
+      <version>4.12</version>
       <scope>test</scope>
     </dependency>
   </dependencies>

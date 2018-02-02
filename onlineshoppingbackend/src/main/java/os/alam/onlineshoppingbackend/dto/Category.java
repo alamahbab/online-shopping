@@ -1,16 +1,37 @@
 package os.alam.onlineshoppingbackend.dto;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Category {
 	
+	@Id
+	@Column(name = "id")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
 	private String name;
 	
 	private String description;
 	
+	@Column(name="image_url")
 	private String imgUrl;
 	
+	@Column(name="isactive")
 	private boolean active =true ;	
+
+	@Override
+	public String toString() {
+		return "Category [id=" + id + ", name=" + name + ", description=" + description + ", imgUrl=" + imgUrl
+				+ ", active=" + active + "]";
+	}
+
+	public Category() {
+	}
 
 	public boolean isActive() {
 		return active;

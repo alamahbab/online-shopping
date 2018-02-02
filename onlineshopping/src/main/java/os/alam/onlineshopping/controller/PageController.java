@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import os.alam.onlineshoppingbackend.dao.CategoryDAO;
+import os.alam.onlineshoppingbackend.dto.Category;
 
 @Controller
 public class PageController {
@@ -39,11 +40,23 @@ public class PageController {
 		return mv;
 	}
 	
-	@RequestMapping(value = {"/listproducts"})
-	public ModelAndView listproduct() {
+	@RequestMapping(value = {"/showallproducts"})
+	public ModelAndView showAllProduts() {
 		ModelAndView mv = new ModelAndView("page");
-		mv.addObject("tile","List products");
-		mv.addObject("userClickedListproducts",true);
+		mv.addObject("tile","All Products");
+		mv.addObject("categories", categoryDAO.getCategories());
+		mv.addObject("userClickedAllproducts",true);
+		return mv;
+	}
+	
+	@RequestMapping(value = {"/show/category/{id}/products"})
+	public ModelAndView showCategoryProduts(@PathVariable("id") int id) {
+		ModelAndView mv = new ModelAndView("page");
+		Category category = categoryDAO.getCategory(id);
+		mv.addObject("tile",category.getName());
+		mv.addObject("categories", categoryDAO.getCategories());
+		mv.addObject("category",category);
+		mv.addObject("userClickedCategoryProducts",true);
 		return mv;
 	}
 }

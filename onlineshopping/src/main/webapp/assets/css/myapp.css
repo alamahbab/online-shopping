@@ -3,6 +3,19 @@ body {
   padding-top: 54px;
 }
 
+.breadcrumb li {
+	
+	padding:0px 9px;
+	border-right:2px solid #004080;
+}
+
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
 @media (min-width: 992px) {
   body {
     padding-top: 56px;
